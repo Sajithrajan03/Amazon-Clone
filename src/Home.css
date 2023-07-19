@@ -1,0 +1,11 @@
+.home_container{
+   
+}
+.home_image{
+    width:100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    -webkit-mask-image: linear-gradient(rgb(0, 0, 0), transparent);
+  
+
+}
