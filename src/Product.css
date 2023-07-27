@@ -27,8 +27,18 @@
     border-color: #a88734 #9c7e31 #846a29;
     color: black;
     font-weight: 500;
+    cursor: pointer;
+            
+            transition: 0.2s all;
 }
 
+
+.product > button:active {
+    transform: scale(1.1);
+    /* Scaling button to 0.98 to its original size */
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    /* Lowering the shadow */
+}
 .product_rating{
     display: flex;
     
