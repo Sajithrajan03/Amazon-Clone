@@ -4,21 +4,25 @@ import Home from './Home';
 import './App.css'
 import { BrowserRouter as Router,Routes,Route } from 'react-router-dom';
 import Checkout from './checkout/Checkout';
+import Login from './login/Login';
 
 function App() {
   return (
     <Router>
     <div className="app">
-    <Header />
+    
       <Routes>
         <Route   path="/checkout" element={<>
+          <Header />
            <Checkout />
           </>
           }/>
         <Route   path="/" element={<>
+          <Header />
            <Home />
           </>
           }/>
+          <Route path="/login" element={<Login/>}/>
           
         
 
