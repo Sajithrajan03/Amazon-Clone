@@ -46,7 +46,7 @@ function App() {
           }/>
           <Route path="/login" element={<Login/>}/>
           
-        
+          <Route path="/payment" element={<><Header/><h1>adsfka</h1></> }/>
 
 
 </Routes>
