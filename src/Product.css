@@ -12,6 +12,14 @@
     max-height: 400px;
 
 }
+
+.product { transition: all .1s ease-in-out; }
+.product:hover { transform: scale(1.03);
+z-index: 3000;
+border :1px solid black;
+ }
+
+
 .product > img{
     max-height: 200px;
     width:100%;

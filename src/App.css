@@ -1,6 +1,6 @@
 body{
     background-color: rgb(234,237,237);
-    
+    overflow-x:hidden
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -11,11 +11,12 @@ body{
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #174ef3;
+    background: #74a7f8;
     border-radius: 15px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #74a7f8;
+    
+    background: #174ef3;
   }

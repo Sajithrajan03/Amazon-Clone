@@ -9,7 +9,7 @@ function Home() {
             <div className='home_row'>
               
               <Product image="https://m.media-amazon.com/images/I/81TjRLHaz1L._SL1500_.jpg"
-            title="sung 22-inch(54.62cm) FHD Monitor, IPS, 75 Hz,
+            title="Samsung 22-inch(54.62cm) FHD Monitor, IPS, 75 Hz,
             Bezel Less Design, AMD FreeSync, Flicker Free, HDMI, D-sub, (LF22T350FHWXXL, Dark Blue Gray)"
             price={9000} rating={4}/>
               <Product image="https://m.media-amazon.com/images/I/61iHq6qV0gL._SL1422_.jpg"
