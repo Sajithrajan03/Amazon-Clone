@@ -13,11 +13,15 @@
 }
 
 .checkout_title{
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
     padding: 10px;
-    border-bottom: 1px solid lightgray;
+    
 }
 
 
+.toptitle{
+    border-bottom: 2px solid lightgray;
+}
 
 

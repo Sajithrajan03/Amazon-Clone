@@ -6,7 +6,7 @@ import CheckoutProduct from '../CheckoutProduct';
 import { ListItemAvatar } from '@mui/material';
 
 function Checkout() {
-    const [{basket},dispatch] = useStateValue();
+    const [{basket,user},dispatch] = useStateValue();
     {basket.map(item => (
         console.log(item.title)
     ))}
@@ -15,10 +15,12 @@ function Checkout() {
         <div className='checkout_left'>
             <img src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg" />
             <div>
-                <h2 className="checkout_title">
+                <div className="toptitle">
+                <h2>Hello , {user?.email}!</h2>
+                <h1 className="checkout_title">
                     Your Shoping Basket
-                </h2>
-               
+                </h1>
+                </div>
 {basket.map(item => (
     
     <CheckoutProduct id ={item.id} title = {item.title} 
