@@ -14,7 +14,7 @@
 }
 
 .product { transition: all .1s ease-in-out; }
-.product:hover { transform: scale(1.03);
+.product:hover { transform: scale(1.02);
 z-index: 3000;
 border :1px solid black;
  }
