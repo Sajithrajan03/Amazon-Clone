@@ -4,12 +4,17 @@ import {useStateValue} from "./StateProvider";
 import CheckoutProduct from './CheckoutProduct';
 import { Link } from 'react-router-dom';
 import { CardElement,useStripe,useElements } from '@stripe/react-stripe-js';
+import CurrencyFormat from 'react-currency-format';
+import { getBasketTotal } from './reducer';
+
 
 function Payment() {
   const [{basket,user},dispatch] = useStateValue();
   const stripe = useStripe();
   const elements = useElements();
 
+  const [succedded,setSuccedded] = useState(false);
+  const [processing,setProcessing] = useState("");
   const [error,setError] = useState(null);
   const [disabled,setDisabled] = useState(true);
   const handleSubmit = e => {
@@ -21,6 +26,9 @@ function Payment() {
     setDisabled(event.empty);
     setError(event.error ? event.error.message: "");
   }
+  
+   
+
 
   return (
     <div className='payment'>
@@ -67,9 +75,9 @@ function Payment() {
                   <div className="price_container">
                   <CurrencyFormat
         renderText = {
-            (value) => {
+            (value) => (
               <h3>Order Total: {value}</h3>
-            }
+            )
         }
 
         decimalScale = {2}
@@ -78,6 +86,10 @@ function Payment() {
         thousandSeparator={true}
         prefix={'₹ '}
       />
+      <button disabled={processing || disabled|| succedded}><span>
+        {processing?<p>Processing</p>:"Buy Now"}
+      </span>
+       </button>
                   </div>
                 </form>
             </div>
