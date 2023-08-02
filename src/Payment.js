@@ -19,16 +19,16 @@ function Payment() {
   const [error,setError] = useState(null);
   const [disabled,setDisabled] = useState(true);
   
-  useEffect(() =>{
-    const getClientSecret = async () =>{
-      const response = await axios({
-        method:"post",
-        url:`/payments/create?total=${getBasketTotal(basket)*100}`
-      });
-      setClientSecret(response.data.clientSecret)
-    }
-    getClientSecret();
-  },[basket])
+  // useEffect(() =>{
+  //   const getClientSecret = async () =>{
+  //     const response = await axios({
+  //       method:"post",
+  //       url:`/payments/create?total=${getBasketTotal(basket)*100}`
+  //     });
+  //     // setClientSecret(response.data.clientSecret)
+  //   }
+  //   getClientSecret();
+  // },[basket])
   const handleSubmit = e => {
     e.preventDefault();
      
